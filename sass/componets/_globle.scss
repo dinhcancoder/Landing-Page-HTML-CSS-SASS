@@ -1,0 +1,81 @@
+body {
+  position: relative;
+  font-family: $font;
+  overflow-x: hidden;
+}
+
+.btn {
+  display: inline-block;
+  color: white !important;
+  letter-spacing: .4px;
+  @include borderRadius(4px);
+
+  &--primary {
+    background-color: var(--primary-color);
+
+    &:hover {
+      filter: brightness(1.1);
+      -webkit-filter: brightness(1.1);
+    }
+  }
+
+  &--gray {
+    color: var(--black-color) !important;
+    background-color: var(--gray-color);
+  }
+}
+
+.title {
+  color: var(--black-color);
+  text-align: center;
+  font-size: 4.4rem;
+  font-weight: 700;
+  padding-bottom: 10px;
+
+  @include lg {
+    font-size: 4.5rem;
+  }
+
+  @include md {
+    font-size: 3.75rem;
+  }
+
+  @include sm {
+    font-size: 3.2rem;
+  }
+}
+
+.text {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  max-width: 570px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include md {
+    font-size: 1.72rem;
+  }
+}
+
+.input {
+  font-size: 1.5rem;
+  outline: none;
+  letter-spacing: .4px;
+  color: rgb(77, 77, 77);
+  border: none;
+  border: 1px solid rgba(240, 240, 240, .1);
+  box-shadow: 0px 2px 3px rgba(7, 7, 77, 0.05);
+  padding: 14.5px;
+  @include borderRadius(8px);
+
+  &:focus {
+    outline: 1px solid var(--primary-color);
+  }
+}
+
+.darklight .input {
+  color: white;
+  background-color: #242b51;
+  box-shadow: 0px 5px 10px rgba(4, 10, 34, 0.2);
+}

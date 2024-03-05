@@ -1,0 +1,73 @@
+.about {
+  background-color: var(--background-color);
+  padding-top: 120px;
+
+  &-container {
+    @include grid(2);
+    align-items: center;
+    padding-bottom: 100px;
+  }
+
+  &-left {
+    padding: 0 16px;
+  }
+
+  &-img {
+    float: right;
+  }
+
+  &-title {
+    @extend .title;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    @extend .text;
+    margin: 0 0 45px 0;
+    text-align: left;
+  }
+
+  &-box {
+    @include grid(2);
+  }
+
+  &-items {
+    @include flex-align;
+    gap: 12px;
+    padding-bottom: 20px;
+
+    span {
+      display: inline-block;
+      background-color: var(--bg-color);
+      padding: 10px;
+      @include borderRadius(8px);
+
+      svg {
+        color: var(--primary-color);
+        fill: currentColor;
+      }
+    }
+
+    p {
+      @extend .text;
+      margin: 0;
+    }
+  }
+}
+
+.darklight .about-container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@include sm {
+  .about-container,
+  .about-box {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text,
+  .about-title {
+    text-align: center;
+  }
+}

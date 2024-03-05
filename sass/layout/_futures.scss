@@ -1,0 +1,62 @@
+.futures {
+  padding: 120px 0 50px 0;
+  background-color: var(--bg-color);
+
+  &-box {
+    @include grid(3);
+  }
+
+  &-textbg {
+    @extend .text;
+    margin-bottom: 100px;
+  }
+
+  &-items {
+    padding: 0 10px 70px 10px;
+  }
+
+  &-svg {
+    display: inline-block;
+    padding: 14px;
+    background-color: var(--box-color);
+    @include borderRadius(8px);
+
+    svg {
+      color: #4a6cf7;
+      fill: currentColor;
+    }
+  }
+
+  &-name {
+    color: var(--black-color);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 25px 0 15px 0;
+  }
+
+  &-textsm {
+    font-size: 1.58rem;
+    color: var(--text-color);
+    padding-right: 18px;
+  }
+}
+
+@include lg {
+  .futures {
+    padding-top: 80px;
+  }
+
+  .futures-box {
+    @include grid(2);
+  }
+}
+
+@include sm {
+  .futures-box {
+    grid-template-columns: 1fr;
+  }
+
+  .futures-items {
+    text-align: center;
+  }
+}

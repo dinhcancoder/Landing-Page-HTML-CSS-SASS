@@ -1,0 +1,219 @@
+.header {
+  background-color: var(--background-color);
+  position: relative;
+
+  &-container {
+    position: relative;
+    z-index: 1;
+    @include flex-spaceBetween;
+    align-items: center;
+    height: 100px;
+  }
+
+  &-left,
+  &-right,
+  &-list {
+    display: flex;
+  }
+
+  &-logo {
+    @include flex-align;
+    gap: 10px;
+    font-size: 3.15rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: .8px;
+
+    i {
+      font-size: 4.4rem;
+    }
+  }
+
+  &-list {
+    align-items: center;
+    gap: 0 35px;
+    height: 100%;
+    margin-left: 80px;
+  }
+
+  &-items {
+    position: relative;
+  }
+
+  &-links {
+    display: block;
+    font-size: 1.55rem;
+    color: var(--black-color);
+    @include transition;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &-right {
+    align-items: center;
+    gap: 0 25px;
+
+    a {
+      color: var(--black-color);
+      font-size: 1.55rem;
+      font-weight: 500;
+    }
+
+    .btn {
+      padding: 12px 35px;
+    }
+
+    i {
+      position: relative;
+      font-size: 2.8rem;
+    }
+  }
+
+  &-menu {
+    display: none;
+    width: 28px;
+  }
+
+  &-box {
+    padding: 100px 0 200px 0;
+    text-align: center;
+
+    a {
+      font-size: 1.55rem;
+      font-weight: 500;
+      padding: 15px 32px;
+      margin: 0 6px;
+    }
+  }
+
+  &-title {
+    max-width: 50%;
+    margin: 0 auto;
+    color: var(--black-color);
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: .4px;
+  }
+
+  &-text {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.72;
+    max-width: 50%;
+    margin: 25px auto 50px auto;
+    color: var(--text-color);
+  }
+
+  &-svgtop,
+  &-svgbottom {
+    position: absolute;
+  }
+
+  &-svgtop {
+    top: 0;
+    right: 0;
+  }
+
+  &-svgbottom {
+    left: 0;
+    bottom: 0;
+  }
+
+  @include lg {
+    &-logo {
+      font-size: 2.72rem;
+
+      i {
+        font-size: 4rem;
+      }
+    }
+
+    &-list {
+      display: none;
+    }
+
+    &-menu {
+      display: block;
+    }
+  }
+
+  @include xl {
+    &-title {
+      max-width: 72%;
+    }
+
+    &-text {
+      max-width: 80%;
+    }
+  }
+
+  @include lg {
+    &-title {
+      max-width: 85%;
+    }
+  }
+
+  @include md {
+    &-box {
+      padding: 50px 0 100px 0;
+    }
+
+    &-title {
+      max-width: 95%;
+      font-size: 3.8rem;
+    }
+
+    &-text {
+      max-width: 95%;
+    }
+
+    &-right {
+
+      &>a:nth-child(1),
+      &>a:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  @include sm {
+
+    &-title,
+    &-text {
+      max-width: 100%;
+    }
+  }
+}
+
+.stiky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.darklight .stiky {
+  background-color: #4a6df734;
+  backdrop-filter: blur(5px);
+}
+
+.darklight .header-logo {
+  color: white;
+}
+
+.stiky .header-container {
+  height: 75px;
+}
+
+.darklight .header-menu {
+  img {
+    filter: invert(1);
+    -webkit-filter: invert(1);
+  }
+}

@@ -1,0 +1,36 @@
+.brand {
+  background-color: var(--background-color);
+  padding-top: 65px;
+
+  &-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 198px;
+    background-color: var(--bgdark-color);
+    @include borderRadius(10px);
+
+    img {
+      max-width: 160px;
+      filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      @include transition;
+
+      &:hover {
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include sm {
+  .brand-container {
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px 0;
+    flex-wrap: nowrap;
+  }
+}

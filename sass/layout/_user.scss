@@ -1,0 +1,70 @@
+.user {
+  background-color: var(--bg-color);
+
+  &-container {
+    padding: 100px 0 80px 0;
+  }
+
+  &-title {
+    @extend .title;
+  }
+
+  &-textbg {
+    @extend .text;
+    margin-bottom: 100px;
+  }
+
+  &-content {
+    @include grid(3, 32px);
+  }
+
+  &-items {
+    background-color: var(--items-color);
+    padding: 32px;
+    box-shadow: 0px 2px 3px rgba(7, 7, 77, 0.05);
+    @include borderRadius(8px);
+  }
+
+  &-rate {
+    display: flex;
+    gap: 4px;
+
+    svg {
+      color: #fbb040;
+      fill: currentColor;
+    }
+  }
+
+  &-text {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    padding: 22px 0 32px 0;
+    margin-bottom: 32px;
+    border-bottom: 1px solid rgb(242, 242, 242);
+  }
+
+  &-box {
+    @include flex-align;
+    gap: 15px
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &-name {
+    color: var(--black-color);
+    font-size: 1.72rem;
+    font-weight: 600;
+  }
+
+  &-disable {
+    color: var(--text-color);
+  }
+}
+
+.darklight .user-text {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

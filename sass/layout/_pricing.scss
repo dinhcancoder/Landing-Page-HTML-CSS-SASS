@@ -1,0 +1,143 @@
+.pricing {
+  position: relative;
+  background-color: var(--background-color);
+  padding: 120px 0 80px 0;
+
+  &-title {
+    @extend .title;
+  }
+
+  &-textbg {
+    @extend .text;
+    margin-bottom: 100px;
+  }
+
+  &-check {
+    @include flex-justify;
+    gap: 15px;
+
+    span {
+      color: var(--black-color);
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+
+  &-input {
+    position: relative;
+    width: 53px;
+    height: 22px;
+    background-color: var(--bgdark-color);
+    @include borderRadius(20px);
+    cursor: pointer;
+    margin-bottom: 65px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      @include transform(translateY(-50%));
+      left: 0;
+      width: 28px;
+      height: 28px;
+      background-color: white;
+      border: 6.5px solid var(--primary-color);
+      @include borderRadius(50%);
+      @include transition;
+    }
+  }
+
+  &-content {
+    @include grid(3, 25px);
+  }
+
+  &-items {
+    position: relative;
+    padding: 40px 32px;
+    box-shadow: 0px 5px 10px rgba(4, 10, 34, 0.2);
+    background-color: var(--items-color);
+    @include borderRadius(8px);
+  }
+
+  &-price {
+    color: var(--black-color);
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &-text {
+    font-size: 1.62rem;
+    color: rgb(130, 130, 130);
+    margin: 15px 0 25px 0;
+  }
+
+  &-btn {
+    display: block;
+    font-size: 1.62rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 0;
+    margin-bottom: 30px;
+  }
+
+  &-list {
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &-box {
+    @include flex-align;
+    gap: 10px;
+
+    span {
+      @include flex-center;
+      width: 20px;
+      height: 20px;
+      background-color: var(--box-color);
+      @include borderRadius(50%);
+
+      svg {
+        color: #4a6cf7;
+        fill: currentColor;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    >svg {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &-svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.clickPricingInput::before {
+  left: unset;
+  margin-left: calc(100% - 25px);
+}
+
+.darklight .pricing-input {
+  background-color: #1d2144;
+}
+
+.darklight .pricing-box span {
+  background-color: #4a6df717;
+}
+
+.darklight .pricing-text,
+.darklight .pricing-box p {
+  color: white;
+}
+
+.darklight .pricing-list {
+  border-color: rgba(255, 255, 255, 0.1);
+}

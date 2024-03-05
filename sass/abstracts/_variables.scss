@@ -1,0 +1,30 @@
+$font: 'Inter', sans-serif;
+
+:root {
+  --primary-color: #4a6cf7;
+  --black-color: black;
+  --white-color: white;
+  --text-color: #a2a8ba;
+  --gray-color: #e5e6ea;
+  --background-color: white;
+  --bg-color: #f9faff;
+  --bgdark-color: #1d2144;
+  --box-color: #e7ecff;
+  --star-color: #fbb040;
+  --items-color: white;
+}
+
+.darklight {
+  --primary-color: #4a6cf7;
+  --black-color: white;
+  --white-color: black;
+  --text-color: #b5b9c6;
+  --gray-color: #222749;
+  --orange-color: #fbb040;
+  --background-color: #090e34;
+  --bg-color: #0b113a;
+  --box-color: #111a4e;
+  --star-color: #fbb040;
+  --items-color: #1d2144;
+  --bgdark-color: #0d123e;
+}
